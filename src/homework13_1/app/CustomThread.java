@@ -2,12 +2,12 @@ package homework13_1.app;
 
 import java.util.concurrent.Semaphore;
 
-public class CustomThread extends Thread{
+public class CustomThread extends Thread {
 
-   private Semaphore sem;
-   private String name;
-   private DataHandler dataHandler;
-   private int[] numbers;
+    private Semaphore sem;
+    private String name;
+    private DataHandler dataHandler;
+    private int[] numbers;
 
     public CustomThread(String name, Semaphore sem, DataHandler dataHandler, int[] numbers) {
         super(name);
@@ -19,14 +19,14 @@ public class CustomThread extends Thread{
 
     @Override
     public void run() {
-        if(this.getName().equals("Alpha")){
+        if (this.getName().equals("Alpha")) {
             dataOperate(3);
         } else {
             dataOperate(5);
         }
     }
 
-    private void dataOperate (int coefficient){
+    private void dataOperate(int coefficient) {
         System.out.println(name + " started");
         try {
             sem.acquire();
@@ -37,7 +37,7 @@ public class CustomThread extends Thread{
                 System.out.println("New value is " + newNum);
                 Thread.sleep(100);
             }
-        } catch (InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
         sem.release();
