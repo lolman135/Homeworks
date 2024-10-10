@@ -41,7 +41,7 @@ public class CustomThread extends Thread{
             System.out.println(e.getMessage());
         }
         sem.release();
-        System.out.println("\n" + name + "released permit\n" +
+        System.out.println("\n" + name + " released permit\n" +
                 "======================================");
     }
 }
