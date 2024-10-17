@@ -20,7 +20,7 @@ public class DataHandler{
             return "NAME: id " + id + ", " +
                     map.get(id);
         } else {
-            return "No data!";
+            return "No data!\n";
         }
     }
 }

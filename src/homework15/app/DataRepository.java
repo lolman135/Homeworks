@@ -13,4 +13,8 @@ public class DataRepository {
         map.put(172, "Tom");
         return map;
     }
+
+    public static int[] getIdCodes(){
+        return new int[]{387, 231, 394, 172};
+    }
 }
