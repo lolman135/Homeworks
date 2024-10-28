@@ -15,21 +15,16 @@ public class Main {
         catalog.add(new Product("Tomato", "vegetable", 5));
         catalog.add(new Product("Jacket", "clothes", 70));
 
+
+        //I tried to do it in another way, but code went large and hard to read,
+        //so I decided to realize code like in example.
         Map<String, Double> group = catalog.stream()
                 .collect(Collectors.groupingBy(Product::getCategory, Collectors.averagingDouble(Product::getPrice)));
 
         System.out.println(group);
 
         Map.Entry<String, Double> maxPrice = Collections.max(group.entrySet(), Map.Entry.comparingByValue());
-        System.out.println("Category: " + maxPrice.getKey() + ", max price: " + maxPrice.getValue());
+        System.out.println("Max price " + maxPrice.getValue() + " is at category " + maxPrice.getKey());
 
-//        group.forEach((key, value) -> {
-//            double averagePrice = value.stream().collect(Collectors.averagingDouble(Product::getPrice));
-//            System.out.println("Category: " + key);
-//            value.forEach(product -> System.out.println(product.toString()));
-//            System.out.println("Average price: " + averagePrice + "\n");
-//        });
-//
-//
     }
 }
