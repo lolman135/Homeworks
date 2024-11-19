@@ -18,7 +18,7 @@ public class ReflectionUtils {
             if (method.isAnnotationPresent(Author.class)){
                 Author author = method.getAnnotation(Author.class);
                 System.out.println("Author name: " + author.name());
-                System.out.println("Author surname: " + author.name());
+                System.out.println("Author surname: " + author.surname());
             }
             System.out.println();
         }
