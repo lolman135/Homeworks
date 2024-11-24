@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         String password = PasswordGenerator.generatePassword(10);
-        System.out.println(password);
+        System.out.println("Generated password: " + password);
     }
 
 }
