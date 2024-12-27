@@ -27,8 +27,7 @@ public class Student {
     @Column(name = "email")
     private String email;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "student")
-
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "student", orphanRemoval = true)
     private Set<Homework> homeworks = new HashSet<>();
 
     public Student(String firstName, String lastName, String email) {

@@ -29,7 +29,7 @@ public class Homework {
     private int mark;
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.MERGE})
-    @JoinColumn(name = "student_id")
+    @JoinColumn(name = "student_id", nullable = false)
     private Student student;
 
     public Homework(String description, int mark, LocalDate deadline) {
