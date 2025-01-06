@@ -38,13 +38,18 @@ public class LibraryTest {
         System.out.println("Title: " + testBook.getTitle());
         System.out.println("Author: " + testBook.getAuthor());
 
-        library.addBook(testBook);
+        testBook = library.addBook(testBook);
     }
 
     @AfterEach
     void cleanTestBook() {
-        System.out.println("After each: Deleting test book from db");
-        library.removeBook(testBook.getId());
+        if (testBook != null && testBook.getId() > 0) {
+            try {
+                library.removeBook(testBook.getId());
+            } catch (Exception e) {
+                System.out.println("Test book might already be deleted: " + e.getMessage());
+            }
+        }
     }
 
     @Test
@@ -74,6 +79,7 @@ public class LibraryTest {
     @Order(3)
     void testRemoveBook() {
         boolean isDeleted = library.removeBook(testBook.getId());
+        System.out.println(isDeleted);
         assertTrue(isDeleted);
     }
 

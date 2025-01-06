@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Library {
 
-    public void addBook(Book book) {
+    public Book addBook(Book book) {
 
         if (book == null || !book.isValid()){
             throw new IllegalArgumentException("Wrong data");
@@ -18,8 +18,9 @@ public class Library {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
-            session.merge(book);
+            Book persistedBook = (Book) session.merge(book);
             transaction.commit();
+            return persistedBook;
         } catch (Exception e) {
             if (transaction != null) transaction.rollback();
             throw new RuntimeException("Error while adding book", e);
@@ -27,6 +28,7 @@ public class Library {
     }
 
     public boolean removeBook(int id) {
+        System.out.println("book id: " + id);
         if(id <= 0){
             throw new IllegalArgumentException("Wrong id");
         }
@@ -40,7 +42,6 @@ public class Library {
             transaction.commit();
             isDeleted = true;
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback();
             throw new IllegalArgumentException("Wrong data provided");
         }
         return isDeleted;
