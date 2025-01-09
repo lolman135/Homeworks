@@ -1,0 +1,49 @@
+2025-01-09 22:06:14,918 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=1 and customer name Radomir
+2025-01-09 22:06:14,919 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=2 and customer name Leo
+2025-01-09 22:06:14,919 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=3 and customer name Markus
+2025-01-09 22:06:14,919 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=4 and customer name Tyrion
+2025-01-09 22:07:09,373 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=1 and customer name Radomir
+2025-01-09 22:07:09,373 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=2 and customer name Leo
+2025-01-09 22:07:09,373 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=3 and customer name Markus
+2025-01-09 22:07:09,373 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=4 and customer name Tyrion
+2025-01-09 22:07:23,780 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=1 and customer name Radomir
+2025-01-09 22:07:23,780 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=2 and customer name Leo
+2025-01-09 22:07:23,780 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=3 and customer name Markus
+2025-01-09 22:07:23,780 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=4 and customer name Tyrion
+2025-01-09 22:08:43,621 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=1 and customer name Radomir
+2025-01-09 22:08:43,621 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=2 and customer name Leo
+2025-01-09 22:08:43,621 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=3 and customer name Markus
+2025-01-09 22:08:43,621 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=4 and customer name Tyrion
+2025-01-09 22:08:43,622 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:08:43,622 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:08:43,622 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:08:43,622 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:08:55,110 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=1 and customer name Radomir
+2025-01-09 22:08:55,110 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=2 and customer name Leo
+2025-01-09 22:08:55,110 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=3 and customer name Markus
+2025-01-09 22:08:55,110 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=4 and customer name Tyrion
+2025-01-09 22:08:55,110 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:08:55,110 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:08:55,112 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:08:55,112 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:09:21,285 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=1 and customer name Radomir
+2025-01-09 22:09:21,285 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=2 and customer name Leo
+2025-01-09 22:09:21,285 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=3 and customer name Markus
+2025-01-09 22:09:21,285 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=4 and customer name Tyrion
+2025-01-09 22:09:21,285 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:09:21,285 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:09:21,288 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:09:21,288 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:09:21,288 [main] ERROR homework32.Main - Error: wrong operation with board
+2025-01-09 22:10:25,884 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=1 and customer name Radomir
+2025-01-09 22:10:25,884 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=2 and customer name Leo
+2025-01-09 22:10:25,884 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=3 and customer name Markus
+2025-01-09 22:10:25,884 [main] INFO  homework32.CoffeeOrderBoard - added new order with number=4 and customer name Tyrion
+2025-01-09 22:10:25,885 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:10:25,885 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:10:25,887 [main] WARN  homework32.CoffeeOrderBoard - Attempting to get order from queue
+2025-01-09 22:10:25,887 [main] INFO  homework32.CoffeeOrderBoard - Got first element order the queue
+2025-01-09 22:10:25,887 [main] ERROR homework32.Main - Error: wrong operation with board
+java.lang.IllegalArgumentException: Wrong index!
+	at homework32.CoffeeOrderBoard.deliver(CoffeeOrderBoard.java:53)
+	at homework32.Main.main(Main.java:25)
